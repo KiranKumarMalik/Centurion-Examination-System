@@ -35,16 +35,6 @@
             android:textColor="#0009ff" />
 
         <TextView
-            android:id="@+id/signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="364dp"
-            android:layout_marginRight="18dp"
-            android:text="Not have an account? Sign up now"
-            android:textColor="#000000" />
-
-        <TextView
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

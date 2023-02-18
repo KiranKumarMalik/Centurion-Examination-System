@@ -25,7 +25,7 @@
             android:id="@+id/loginasstudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="120dp"
             android:layout_marginTop="314dp"
             android:layout_marginRight="18dp"
             android:drawableLeft="@drawable/ic_user"
@@ -45,6 +45,33 @@
             android:textSize="34sp"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="257dp"
+            android:layout_height="210dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="25dp"
+            app:srcCompat="@drawable/exam" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="230dp"/>
+
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="252dp"
+        android:layout_height="132dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="78dp"
+        android:padding="8dp"
+        app:srcCompat="@drawable/cutmlogo" />
 
 </RelativeLayout>

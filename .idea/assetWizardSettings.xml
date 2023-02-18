@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/admin_panel_settings/baseline_admin_panel_settings_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/assignment_turned_in/baseline_assignment_turned_in_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,7 +33,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="admin" />
+                            <entry key="outputName" value="ic_baseline_assignment_turned_in_24" />
                             <entry key="sourceFile" value="E:\College data\Semester\6th Semester\RelativeLayoutLoginPage" />
                           </map>
                         </option>
