@@ -121,20 +121,23 @@
         android:layout_width="152dp"
         android:layout_height="144dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="238dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="128dp"
         app:cardBackgroundColor="#27285C"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true">>
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imageView7"
             android:layout_width="54dp"
             android:layout_height="40dp"
-            app:tint="@color/white"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="18dp"
+            app:tint="@color/white"
             app:srcCompat="@drawable/ic_user" />
 
         <TextView
@@ -144,6 +147,40 @@
             android:layout_marginLeft="35dp"
             android:layout_marginTop="65dp"
             android:text="Profile"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="152dp"
+        android:layout_height="144dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="238dp"
+        app:cardBackgroundColor="#27285C"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@drawable/ic_admitcard"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/admitcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="65dp"
+            android:text="Admit Card"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
