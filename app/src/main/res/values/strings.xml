@@ -5,4 +5,6 @@
     <string name="Recent" translatable="false">First</string>
     <string name="Past" translatable="false">Second</string>
     <string name="Upcoming" translatable="false">Third</string>
+    <string name="Open">NavBar</string>
+    <string name="Close">NavBar</string>
 </resources>

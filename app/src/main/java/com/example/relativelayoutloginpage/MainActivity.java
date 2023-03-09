@@ -89,7 +89,7 @@ private static int RC_SIGN_IN=100;
 
                 Toast.makeText(this,"User email:"+personEmail,Toast.LENGTH_SHORT).show();
             }
-            startActivity(new Intent(MainActivity.this, student_home.class));
+            startActivity(new Intent(MainActivity.this, student_home_page.class));
 
             // Signed in successfully, show authenticated UI.
         } catch (ApiException e) {
