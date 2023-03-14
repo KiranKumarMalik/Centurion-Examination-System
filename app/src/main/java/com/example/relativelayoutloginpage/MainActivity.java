@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -21,10 +22,10 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
 public class MainActivity extends AppCompatActivity {
+    TextView admin;
     GoogleSignInClient mGoogleSignInClient;
 private static int RC_SIGN_IN=100;
 
-    CardView exam, notice, result, admitcard, profile;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +50,15 @@ private static int RC_SIGN_IN=100;
             }
         });
 
-//        exam = (CardView) findViewById(R.id.exam_card);
-//        notice = (CardView) findViewById(R.id.notice_card);
-//        result = (CardView) findViewById(R.id.result_card);
-//        admitcard = (CardView) findViewById(R.id.admit_card);
-//        profile = (CardView) findViewById(R.id.profile_card);
+        admin = (TextView) findViewById(R.id.loginasadmin);
 
-
-
+        admin.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), admin_login.class);
+                startActivity(intent);
+            }
+        }));
     }
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();

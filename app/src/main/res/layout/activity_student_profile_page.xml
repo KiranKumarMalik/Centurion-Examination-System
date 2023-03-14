@@ -288,36 +288,17 @@
         android:layout_marginBottom="281dp"
         android:text="2020-24" />
 
-    <TextView
-        android:id="@+id/student_details"
-        android:layout_width="174dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="572dp"
-        android:text="Student Details"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="18dp"/>
-
     <Button
-        android:id="@+id/update"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_width="143dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="505dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="178dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="199dp"
         android:drawableLeft="@drawable/ic_update"
-        android:text="Update"/>
+        android:text="Update" />
 
 </RelativeLayout>
