@@ -13,6 +13,13 @@
         android:theme="@style/Theme.RelativeLayoutLoginPage"
         tools:targetApi="31">
         <activity
+            android:name=".notice_admin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".admin_create_exam"
             android:exported="false">
             <meta-data

@@ -22,6 +22,8 @@ public class admin_create_exam extends AppCompatActivity {
     ArrayList<String> arrayList_soet, arrayList_soph, arrayList_soas, arrayList_sofs, arrayList_somc, arrayList_sop, arrayList_som, arrayList_sovet;
     ArrayAdapter<String> arrayAdapter_program;
 
+    ArrayList<String> arrayList_btech, arrayList_mtech, arrayList_bop, arrayList_mop, arrayList_dop, arrayList_soasbsc,arrayList_mca, arrayList_bca, arrayList_sofsbsc, arrayList_sofsmsc, arrayList_bmc, arrayList_somcbsc, arrayList_sopbsc, arrayList_sopboptt, arrayList_sopbp, arrayList_sopmsc, arrayList_sopdiploma, arrayList_bc, arrayList_bba, arrayList_mba, arrayList_diploma;
+    ArrayAdapter<String> arrayAdapter_branch, arrayAdapter_pharmacy_branch;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -66,10 +68,17 @@ public class admin_create_exam extends AppCompatActivity {
         arrayList_soet.add("Bachelor of Technology");
         arrayList_soet.add("Master of Technology");
 
+        arrayAdapter_branch=new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_soet);
+        branch.setAdapter(arrayAdapter_branch);
+
+
         arrayList_soph=new ArrayList<>();
         arrayList_soph.add("Bachelor of Pharmacy");
         arrayList_soph.add("Master of Pharmacy");
         arrayList_soph.add("Diploma in Pharmacy");
+
+        arrayAdapter_branch=new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_soph);
+        branch.setAdapter(arrayAdapter_pharmacy_branch);
 
         arrayList_soas=new ArrayList<>();
         arrayList_soas.add("Bachelor of Science");
@@ -145,12 +154,77 @@ public class admin_create_exam extends AppCompatActivity {
 
                 program.setAdapter(arrayAdapter_program);
             }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+
+        //******Under the program - branch spinner******//
+        arrayList_btech=new ArrayList<>();
+        arrayList_btech.add("Computer Science and Engineering");
+        arrayList_btech.add("Civil Engineering");
+        arrayList_btech.add("Electronics and Communication Engineering");
+        arrayList_btech.add("Electrical Engineering");
+        arrayList_btech.add("Electrical and Electronics Engineering");
+        arrayList_btech.add("Mechanical Engineering");
+        arrayList_btech.add("Bio-Technology Engineering");
+        arrayList_btech.add("Mining Engineering");
+        arrayList_btech.add("Cloud Technology and Information Security Engineering");
+        arrayList_btech.add("Aerospace Engineering");
+
+
+        arrayList_mtech=new ArrayList<>();
+        arrayList_mtech.add("Communication Systems Engineering");
+        arrayList_mtech.add("Design and Manufacturing Engineering");
+        arrayList_mtech.add("Structural Engineering");
+        arrayList_mtech.add("Transportation Engineering");
+        arrayList_mtech.add("Data Science");
+
+        arrayList_bop=new ArrayList<>();
+        arrayList_bop.add("Bachelor of Pharmacy");
+
+        arrayList_mop=new ArrayList<>();
+        arrayList_mop.add("Life Science");
+        arrayList_mop.add("Pharmaceutics");
+        arrayList_mop.add("Industrial Pharmacy");
+        arrayList_mop.add("Pharmaceutical Analysis");
+
+        arrayList_dop=new ArrayList<>();
+        arrayList_dop.add("Life Science");
+        arrayList_dop.add("Pharmaceutics");
+
+
+
+
+        program.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+                if (position==0)
+                {
+                    arrayAdapter_branch=new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_btech);
+                }
+
+                if (position==1)
+                {
+                    arrayAdapter_branch=new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_mtech);
+                }
+
+                branch.setAdapter(arrayAdapter_branch);
+
+            }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
+
+
+
 
     }
 }
