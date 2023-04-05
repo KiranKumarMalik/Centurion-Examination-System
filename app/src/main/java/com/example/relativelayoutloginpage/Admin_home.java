@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Admin_home extends AppCompatActivity implements View.OnClickListener{
 
-    public CardView create_exam, notice_card;
+    public CardView create_exam, notice_card, profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +17,12 @@ public class Admin_home extends AppCompatActivity implements View.OnClickListene
 
         create_exam = (CardView) findViewById(R.id.exam_card);
         notice_card = (CardView) findViewById(R.id.notice_card);
+        profile=(CardView) findViewById(R.id.profile_card);
 
 
         create_exam.setOnClickListener((View.OnClickListener) this);
         notice_card.setOnClickListener(this);
+        profile.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,12 @@ public class Admin_home extends AppCompatActivity implements View.OnClickListene
                 intent=new Intent(this, notice_admin.class);
                 startActivity(intent);
                 break;
+
+            case R.id.profile_card:
+                intent=new Intent(this, admin_profileactivity.class);
+                startActivity(intent);
+                break;
+
         }
     }
 }
