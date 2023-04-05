@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
-    android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    tools:context=".Admin_home">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/result_card"
         android:layout_width="152dp"
         android:layout_height="146dp"
         android:layout_alignParentTop="true"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="65dp"
-            android:text="Results"
+            android:text="Reports"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -46,6 +46,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/exam_card"
         android:layout_width="152dp"
         android:layout_height="144dp"
         android:layout_alignParentTop="true"
@@ -68,11 +69,11 @@
 
         <TextView
             android:id="@+id/exam"
-            android:layout_width="wrap_content"
+            android:layout_width="116dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="37dp"
+            android:layout_marginLeft="0dp"
             android:layout_marginTop="65dp"
-            android:text="Exam"
+            android:text="Create exam"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -80,6 +81,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/notice_card"
         android:layout_width="152dp"
         android:layout_height="144dp"
         android:layout_alignParentTop="true"
@@ -108,9 +110,9 @@
             android:id="@+id/notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="19dp"
             android:layout_marginTop="65dp"
-            android:text="Notice"
+            android:text="Add notice"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -118,27 +120,29 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/profile_card"
         android:layout_width="152dp"
         android:layout_height="144dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="236dp"
-        android:layout_marginEnd="128dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginEnd="-9dp"
         app:cardBackgroundColor="#27285C"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">>
+
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="54dp"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="18dp"
-            app:tint="@color/white"
-            app:srcCompat="@drawable/ic_user" />
+            app:srcCompat="@drawable/ic_user"
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/profile"
@@ -150,10 +154,13 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
+
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/admit_card"
         android:layout_width="152dp"
         android:layout_height="144dp"
         android:layout_alignParentTop="true"
@@ -166,21 +173,60 @@
         app:cardUseCompatPadding="true">
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/approval_icon"
             android:layout_width="54dp"
             android:layout_height="40dp"
+            app:tint="@color/white"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="18dp"
-            app:srcCompat="@drawable/ic_admitcard"
-            app:tint="@color/white" />
+            app:srcCompat="@drawable/student_approval" />
 
         <TextView
-            android:id="@+id/admitcard"
+            android:id="@+id/approval_std"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="08dp"
+            android:layout_marginTop="55dp"
+            android:text="Approval of Student"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/proctoring"
+        android:layout_width="152dp"
+        android:layout_height="144dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="238dp"
+        android:layout_marginEnd="130dp"
+        app:cardBackgroundColor="#27285C"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true" >
+
+        <ImageView
+            android:id="@+id/proctor_img"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+            app:tint="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            app:srcCompat="@drawable/proctoring" />
+
+        <TextView
+            android:id="@+id/proctor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="19dp"
             android:layout_marginTop="65dp"
-            android:text="Admit Card"
+            android:text="Proctoring"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
@@ -228,7 +274,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="1dp"
         app:cardBackgroundColor="#27285C"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -241,6 +287,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/cutmlogo" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/ic_baseline_menu_24"
+            app:tint="@color/white"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="300dp"/>
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
