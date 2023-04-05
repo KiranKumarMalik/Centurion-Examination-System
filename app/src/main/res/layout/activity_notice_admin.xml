@@ -18,7 +18,8 @@
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true">>
+        app:cardUseCompatPadding="true"
+        tools:ignore="ExtraText">>
 
         <ImageView
             android:id="@+id/imageView8"
@@ -54,11 +55,12 @@
         android:layout_marginStart="23dp"
         android:layout_marginEnd="113dp"
         android:layout_marginBottom="526dp"
-        android:hint="Select Date..."
         android:clickable="false"
         android:cursorVisible="false"
         android:focusable="false"
-        android:focusableInTouchMode="false"/>
+        android:focusableInTouchMode="false"
+        android:hint="Select Date..."
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/start_time"
@@ -88,7 +90,8 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:hint="Select Time..." />
+        android:hint="Select Time..."
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/end_date"
@@ -118,7 +121,8 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:hint="Select Date..." />
+        android:hint="Select Date..."
+        tools:ignore="VisualLintTextFieldSize,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/end_time"
@@ -148,7 +152,8 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:hint="Select Time..." />
+        android:hint="Select Time..."
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/notice_input"
