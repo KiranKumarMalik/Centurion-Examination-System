@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 
 public class student_home_page extends AppCompatActivity implements View.OnClickListener {
 
-    public CardView exam, notice, result, admitcard, profile;
+    public CardView exam, notice, result, profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,13 +19,11 @@ public class student_home_page extends AppCompatActivity implements View.OnClick
         exam = (CardView) findViewById(R.id.exam_card);
         notice = (CardView) findViewById(R.id.notice_card);
         result = (CardView) findViewById(R.id.result_card);
-        admitcard = (CardView) findViewById(R.id.admit_card);
         profile = (CardView) findViewById(R.id.profile_card);
 
         exam.setOnClickListener(this);
         notice.setOnClickListener(this);
         result.setOnClickListener(this);
-        admitcard.setOnClickListener(this);
         profile.setOnClickListener(this);
 
     }
