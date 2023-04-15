@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class admin_create_exam extends AppCompatActivity {
+
+    private Button submit;
 
     Spinner campus, school, program, branch;
     ArrayList<String> arrIds = new ArrayList<>();
@@ -25,16 +29,31 @@ public class admin_create_exam extends AppCompatActivity {
     ArrayList<String> arrayList_btech, arrayList_mtech, arrayList_bop, arrayList_mop, arrayList_dop, arrayList_soasbsc,arrayList_mca, arrayList_bca, arrayList_sofsbsc, arrayList_sofsmsc, arrayList_bmc, arrayList_somcbsc, arrayList_sopbsc, arrayList_sopboptt, arrayList_sopbp, arrayList_sopmsc, arrayList_sopdiploma, arrayList_bc, arrayList_bba, arrayList_mba, arrayList_diploma;
     ArrayAdapter<String> arrayAdapter_branch, arrayAdapter_pharmacy_branch;
 
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_create_exam);
 
+        submit = (Button) findViewById(R.id.submit_create_exam);
         campus = (Spinner) findViewById(R.id.campus_spinner);
         school = (Spinner) findViewById(R.id.school_spinner);
         program = (Spinner) findViewById(R.id.program_spinner);
         branch = (Spinner) findViewById(R.id.branch_spinner);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNewActivity();
+            }
+        });
+    }
+    public void openNewActivity(){
+        Intent intent = new Intent(this, Admin_add_question.class);
+        startActivity(intent);
+
 
         campus = findViewById(R.id.campus_spinner);
         //Spinner
