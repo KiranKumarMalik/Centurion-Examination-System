@@ -192,6 +192,7 @@
         android:layout_marginStart="131dp"
         android:layout_marginEnd="126dp"
         android:layout_marginBottom="17dp"
-        android:text="Add Question" />
+        android:text="Add Question"
+        tools:ignore="TextSizeCheck" />
 
 </RelativeLayout>
