@@ -138,8 +138,10 @@
         android:layout_marginStart="19dp"
         android:layout_marginEnd="298dp"
         android:layout_marginBottom="22dp"
-        android:color="@color/yellow"
+        android:backgroundTint="@color/yellow"
         android:text="Skip"
+        android:textColor="@color/black"
+
         tools:ignore="TextContrastCheck" />
 
 </RelativeLayout>
